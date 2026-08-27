@@ -1,25 +1,283 @@
-body {
-    /* background-color #f4flea; */
-    /* color #222222; */
-    /* font-family Arial, sans-serif; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f3e9;
+    color: #2d3329;
+}
+
+/* CABEÇALHO */
+
 header {
-    background-color: #6b2d5c;
+    background-color: #173f2a;
     color: white;
-    text-align: center; 
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e2a84b;
+}
+
+/* PARTE PRINCIPAL */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 10%;
+    background: linear-gradient(
+        135deg,
+        #173f2a,
+        #285c3d
+    );
+    color: white;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.subtitulo {
+    color: #e2a84b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: #e2a84b;
+}
+
+.hero p:not(.subtitulo) {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+    background-color: #e2a84b;
+    color: #173f2a;
+    padding: 15px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #f3c66d;
+    transform: translateY(-3px);
+}
+
+/* PINHÃO */
+
+.pinhao {
+    width: 280px;
+    height: 280px;
+    background-color: #e2a84b;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 130px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* SEÇÕES */
+
+.secao {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.secao h2 {
+    color: #173f2a;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.secao > p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* BENEFÍCIOS */
+
+.verde {
+    background-color: #e8eee5;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.card {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    width: 30%;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #173f2a;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* CURIOSIDADES */
+
+.curiosidades {
+    max-width: 900px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.curiosidades div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    border-bottom: 1px solid #d7d2c6;
+}
+
+.curiosidades span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e2a84b;
+}
+
+.curiosidades p {
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #173f2a;
+    color: white;
+    text-align: center;
     padding: 30px;
 }
 
-h1 {
-    font-size: 36px;
+footer p {
+    margin: 8px;
 }
 
-h2 {
-    color:#6b2d5c;
-}
+/* CELULAR */
 
-p  {
-    font-size: 18px;
-    line-height:1.6;
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .pinhao {
+        width: 200px;
+        height: 200px;
+        font-size: 90px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .secao {
+        padding: 60px 7%;
+    }
+
+    .secao h2 {
+        font-size: 30px;
+    }
 }
