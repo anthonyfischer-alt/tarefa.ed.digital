@@ -21,6 +21,11 @@ const btnTema = document.querySelector(".btn-tema");
 btnTema.addEventlistener("click", mudarTema);
 function mudarTema(){
     document.body.classList.toggle("tema-escuro");
-}
+    if (documen.body.classList.contains("tema escuro"))
+    {botaoTema.textContent="☀️";
+        ​}else{
+            botaoTema.textContent="​🌙​";
+        }
+});
 
 
