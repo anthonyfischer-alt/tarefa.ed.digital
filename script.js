@@ -26,6 +26,6 @@ function mudarTema(){
         ​}else{
             botaoTema.textContent="​🌙​";
         }
-});
+};
 
 
