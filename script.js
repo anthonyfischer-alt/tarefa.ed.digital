@@ -1,31 +1,20 @@
-const botoesCurtir = document.querySelectorAll(".curtir");
-botoesCurtir.forEach(function(botaoCurtir){
-    let curtiu = false;
-    botaoCurtir.addEventListener("click", curtir); 
-function curtir(){
-    const contador = botaoCurtir.querySelector("span");
-    if(curtiu === false){
-        contador.textContent++;
-        curtiu = true;
-    } else{
-        contador.textContent--;
-        curtiu = false;
-    }
-}
+// Sistema de curtidas
+document.querySelectorAll(".curtir").forEach(botao => {
+    botao.addEventListener("click", () => {
+        const contador = botao.querySelector("span");
+        contador.textContent = Number(contador.textContent) + 1;
+    });
 });
 
+// Alternar tema claro e escuro
+const botaoTema = document.querySelector(".btn-tema");
 
-
-
-const btnTema = document.querySelector(".btn-tema");
-btnTema.addEventlistener("click", mudarTema);
-function mudarTema(){
+botaoTema.addEventListener("click", () => {
     document.body.classList.toggle("tema-escuro");
-    if (documen.body.classList.contains("tema escuro"))
-    {botaoTema.textContent="☀️";
-        ​}else{
-            botaoTema.textContent="​🌙​";
-        }
-};
 
-
+    if (document.body.classList.contains("tema-escuro")) {
+        botaoTema.textContent = "☀️";
+    } else {
+        botaoTema.textContent = "🌙";
+    }
+});
